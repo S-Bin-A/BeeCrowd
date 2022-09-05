@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int n, x, i, j;
+    scanf("%d", &n);
+
+    if(1 <= n <= 100)
+    {
+        for(i = 1; i <= n; i++)
+        {
+            scanf("%d", &x);
+            int sum = 0;
+
+            for(j = 1; j < x; j++)
+            {
+                if(x % j == 0)
+                    sum = sum + j;
+            }
+
+            if(sum == x)
+                printf("%d eh perfeito\n", x);
+            else if(sum != x)
+                printf("%d nao eh perfeito\n", x);
+        }
+    }
+
+    return 0;
+}
