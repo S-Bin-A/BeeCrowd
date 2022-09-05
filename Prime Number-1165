@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, j, flag;
+    scanf("%d", &n);
+
+    if(1 <= n <= 100)
+    {
+        for(i = 1; i <= n; i++)
+        {
+            int x;
+            scanf("%d", &x);
+            flag = 0;
+
+            for(j = 2; j < x; j++)
+            {
+                if(x % j == 0)
+                {
+                    flag = 1;
+                    break;
+                }
+             }
+
+             if(flag == 1 || x == 1)
+                printf("%d nao eh primo\n", x);
+             else
+                printf("%d eh primo\n", x);
+        }
+    }
+
+    return 0;
+}
